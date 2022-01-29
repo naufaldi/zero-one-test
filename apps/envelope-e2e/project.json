@@ -1,0 +1,28 @@
+{
+  "root": "apps/envelope-e2e",
+  "sourceRoot": "apps/envelope-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/envelope-e2e/cypress.json",
+        "devServerTarget": "envelope:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "envelope:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/envelope-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["envelope"]
+}

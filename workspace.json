@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "envelope": "apps/envelope",
+    "envelope-e2e": "apps/envelope-e2e"
+  }
+}
