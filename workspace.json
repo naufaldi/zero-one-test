@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "envelope": "apps/envelope",
-    "envelope-e2e": "apps/envelope-e2e"
+    "envelope-e2e": "apps/envelope-e2e",
+    "shared-ui-kit": "libs/shared/ui-kit"
   }
 }
