@@ -5,7 +5,12 @@ const Card: FC<{ children: React.ReactNode; className?: string }> = ({
   className,
 }) => {
   return (
-    <div className={clsxm('shadow-md rounded-lg px-12 py-8 w-full', className)}>
+    <div
+      className={clsxm(
+        'shadow-md rounded-lg px-12 py-8 w-full bg-white',
+        className
+      )}
+    >
       {children}
     </div>
   );

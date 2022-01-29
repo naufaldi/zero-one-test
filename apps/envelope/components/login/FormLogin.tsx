@@ -7,34 +7,43 @@ const FormLogin: FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   return (
-    <form className="flex flex-col">
+    <form className="flex flex-col mt-4">
       <Input
         value={email}
-        onChange={() => setEmail(email)}
+        onChange={(e) => setEmail(e.target.value)}
         placeholder=""
         label="Email"
+        id="email"
+        type="email"
+        required
+        className="mb-8"
       />
       <Input
         value={password}
-        onChange={() => setPassword(password)}
+        onChange={(e) => setPassword(e.target.value)}
         placeholder=""
         label="Password"
+        id="password"
+        type="password"
+        required
+        className="mb-2"
       />
       <Link href="/">
-        <a href="" className="text-blue">
+        <a href="" className="text-blue mb-8 font-semibold hover:underline">
           Forgot Password
         </a>
       </Link>
       <div className="flex items-center justify-between">
-        <span>
+        <span className="text-sm flex">
           <p>New User? </p>{' '}
           <Link href="/">
-            <a href="" className="text-blue">
+            <a href="" className="text-blue font-semibold ml-1 hover:underline">
+              {'  '}
               Create Account
             </a>
           </Link>
         </span>
-        <Button variant="primary" size="medium">
+        <Button variant="primary" size="large">
           Sign In
         </Button>
       </div>

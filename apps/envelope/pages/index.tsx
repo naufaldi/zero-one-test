@@ -37,11 +37,17 @@ export function Index() {
               </div>
             </div>
           </div>
-          <div className="col-span-6 bg-white">
+          <div className="col-span-6 bg-gray-100">
             <div className="max-w-screen-md mx-auto h-full">
               <div className="flex flex-col items-center justify-center px-8 h-full max-w-xl mx-auto space-y-4">
-                <h3>Welcome Back</h3>
-                <h5>Sign In to Continue</h5>
+                <div className="flex flex-col text-left w-full">
+                  <h1 className="text-5xl font-bold text-blue-500 mb-4">
+                    Welcome back
+                  </h1>
+                  <h5 className="text-gray-500 mb-6 text-3xl font-bold">
+                    Sign In to Continue
+                  </h5>
+                </div>
                 <Card>
                   <FormLogin />
                 </Card>
