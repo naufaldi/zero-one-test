@@ -7,7 +7,7 @@ const Card: FC<{ children: React.ReactNode; className?: string }> = ({
   return (
     <div
       className={clsxm(
-        'shadow-md rounded-lg px-12 py-8 w-full bg-white',
+        'shadow-md rounded-lg px-6 sm:px-12 py-6 sm:py-8 w-full bg-white',
         className
       )}
     >

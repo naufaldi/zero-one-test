@@ -29,21 +29,28 @@ const FormLogin: FC = () => {
         className="mb-2"
       />
       <Link href="/">
-        <a href="" className="text-blue mb-8 font-semibold hover:underline">
+        <a href="" className="text-blue mb-8 font-semibold hover:underline ">
           Forgot Password
         </a>
       </Link>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-center justify-between">
         <span className="text-sm flex">
           <p>New User? </p>{' '}
           <Link href="/">
-            <a href="" className="text-blue font-semibold ml-1 hover:underline">
+            <a
+              href=""
+              className="text-blue font-semibold ml-1 hover:underline mb-4"
+            >
               {'  '}
               Create Account
             </a>
           </Link>
         </span>
-        <Button variant="primary" size="large">
+        <Button
+          variant="primary"
+          size="large"
+          className="w-full sm:w-auto items-center justify-center"
+        >
           Sign In
         </Button>
       </div>
