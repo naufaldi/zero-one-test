@@ -6,6 +6,18 @@ import Input from '../common/Input';
 const FormLogin: FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    alert(data.message);
+  };
   return (
     <form className="flex flex-col mt-4">
       <Input
@@ -50,6 +62,7 @@ const FormLogin: FC = () => {
           variant="primary"
           size="large"
           className="w-full sm:w-auto items-center justify-center"
+          onClick={handleSubmit}
         >
           Sign In
         </Button>
