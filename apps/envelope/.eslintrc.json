@@ -10,6 +10,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "react/display-name": "off",
         "@next/next/no-html-link-for-pages": ["error", "apps/envelope/pages"]
       }
     },

@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/ui-tail",
+  "sourceRoot": "libs/shared/ui-tail/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui-tail/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui-tail"],
+      "options": {
+        "jestConfig": "libs/shared/ui-tail/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

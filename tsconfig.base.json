@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@zero-one/shared/ui-kit": ["libs/shared/ui-kit/src/index.ts"]
+      "@zero-one/apps/*": ["apps/envelope/*"],
+      "@zero-one/shared/ui-kit": ["libs/shared/ui-kit/src/index.ts"],
+      "@zero-one/shared/ui-tail": ["libs/shared/ui-tail/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

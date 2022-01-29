@@ -1,4 +1,10 @@
-import { SharedUiKit, Button } from '@zero-one/shared/ui-kit';
+import ExternalLink from '../assets/ExternalLink';
+import Button from '../components/common/Button';
+import Card from '../components/common/Card';
+import Grid from '../components/common/Grid';
+import Input from '../components/common/Input';
+import Layout from '../components/layout/Layout';
+import FormLogin from '../components/login/FormLogin';
 
 export function Index() {
   /*
@@ -7,17 +13,44 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div className="bg-white h-screen ">
-      <div className="bg-blue-light">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quasi
-        et temporibus distinctio harum soluta, molestias debitis itaque autem.
-        Voluptas saepe minus reprehenderit dolor consequuntur cum vitae fugiat,
-        dolores pariatur.
-        {/* <Button> Halo </Button> */}
-        <SharedUiKit />
-        <Button> hallo </Button>
+    <Layout>
+      <div className="w-full h-screen">
+        <Grid className="h-full">
+          <div className="col-span-6 bg-blue-500">
+            <div className="max-w-screen-md mx-auto h-full">
+              <div className="flex flex-col items-center justify-center px-8 h-full max-w-lg mx-auto space-y-4">
+                <h1 className="text-5xl font-bold text-white text-center leading-snug">
+                  Introduction our 2020 Report
+                </h1>
+                <p className="text-white text-center text-lg mt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore aliquam suscipit reiciendis dolores atque sint neque.
+                </p>
+                <Button
+                  variant="outline"
+                  size="large"
+                  className="rounded-lg max-w-[250px] w-full flex items-center justify-center"
+                >
+                  View Report
+                  <ExternalLink className="w-4 h-4 ml-3" />
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-6 bg-white">
+            <div className="max-w-screen-md mx-auto h-full">
+              <div className="flex flex-col items-center justify-center px-8 h-full max-w-xl mx-auto space-y-4">
+                <h3>Welcome Back</h3>
+                <h5>Sign In to Continue</h5>
+                <Card>
+                  <FormLogin />
+                </Card>
+              </div>
+            </div>
+          </div>
+        </Grid>
       </div>
-    </div>
+    </Layout>
   );
 }
 
