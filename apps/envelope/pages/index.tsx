@@ -1,10 +1,7 @@
-import { Grid } from '@zero-one/shared/ui-tail';
+import { Button, Grid, Alert, Card } from '@zero-one/shared/ui-tail';
+
 import { useRecoilValue } from 'recoil';
 import ExternalLink from '../assets/ExternalLink';
-import Alert from '../components/common/Alert';
-import Button from '../components/common/Button';
-import Card from '../components/common/Card';
-// import Grid from '../components/common/Grid';
 import Layout from '../components/layout/Layout';
 import FormLogin from '../components/login/FormLogin';
 import { AlertAtom } from '../recoil/Alert';
