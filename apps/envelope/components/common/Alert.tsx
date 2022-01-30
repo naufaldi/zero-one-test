@@ -15,7 +15,7 @@ const Alert: FC<AlertProps> = ({ variant, title, children, className }) => {
   return (
     <div
       className={clsxm(
-        'p-4 mb-4 text-sm  rounded-lg',
+        'p-4 mb-4 text-sm  rounded-lg relative',
         [
           variant === 'success' && 'text-green-700 bg-green-100',
           variant === 'error' && 'text-red-700 bg-red-100',
@@ -24,7 +24,7 @@ const Alert: FC<AlertProps> = ({ variant, title, children, className }) => {
       )}
       role="alert"
     >
-      <span className="font-medium capitalize">{title}</span> {children}
+      <span className="font-bold capitalize">{title}</span> {children}
     </div>
   );
 };

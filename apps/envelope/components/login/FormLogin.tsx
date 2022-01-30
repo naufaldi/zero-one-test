@@ -33,7 +33,7 @@ const FormLogin: FC = () => {
     }
   };
   return (
-    <form className="flex flex-col mt-4">
+    <form className="flex flex-col mt-4" onSubmit={handleSubmit}>
       <Input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -76,7 +76,7 @@ const FormLogin: FC = () => {
           variant="primary"
           size="large"
           className="w-full sm:w-auto items-center justify-center"
-          onClick={handleSubmit}
+          type="submit"
         >
           Sign In
         </Button>

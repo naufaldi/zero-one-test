@@ -53,12 +53,12 @@ export function Index() {
                   </h5>
                 </div>
                 <Card>
-                  {alertMessage.type == 'error' ? (
+                  {alertMessage?.type === 'error' ? (
                     <Alert title="Error!" variant="error">
                       {alertMessage.message}{' '}
                     </Alert>
                   ) : null}
-                  {alertMessage.type == 'success' ? (
+                  {alertMessage?.type === 'success' ? (
                     <Alert title="Success!" variant="success">
                       {alertMessage.message}{' '}
                     </Alert>
