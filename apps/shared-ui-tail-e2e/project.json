@@ -1,0 +1,28 @@
+{
+  "root": "apps/shared-ui-tail-e2e",
+  "sourceRoot": "apps/shared-ui-tail-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/shared-ui-tail-e2e/cypress.json",
+        "devServerTarget": "shared-ui-tail:storybook"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "shared-ui-tail:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/shared-ui-tail-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["shared-ui-tail"]
+}

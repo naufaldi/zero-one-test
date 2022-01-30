@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
 import clsxm from '../lib/clsxm';
 
-export const Card: FC<{ children: React.ReactNode; className?: string }> = ({
-  children,
-  className,
-}) => {
+export type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Card: FC<CardProps> = ({ children, className }) => {
   return (
     <div
       className={clsxm(
