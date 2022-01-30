@@ -1,10 +1,13 @@
+import { useRecoilValue } from 'recoil';
 import ExternalLink from '../assets/ExternalLink';
+import Alert from '../components/common/Alert';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import Grid from '../components/common/Grid';
 import Input from '../components/common/Input';
 import Layout from '../components/layout/Layout';
 import FormLogin from '../components/login/FormLogin';
+import { AlertAtom } from '../recoil/Alert';
 
 export function Index() {
   /*
@@ -12,6 +15,7 @@ export function Index() {
    *
    * Note: The corresponding styles are in the ./index.css file.
    */
+  const alertMessage = useRecoilValue(AlertAtom);
   return (
     <Layout>
       <div className="w-full h-screen">
@@ -49,6 +53,16 @@ export function Index() {
                   </h5>
                 </div>
                 <Card>
+                  {alertMessage.type == 'error' ? (
+                    <Alert title="Error!" variant="error">
+                      {alertMessage.message}{' '}
+                    </Alert>
+                  ) : null}
+                  {alertMessage.type == 'success' ? (
+                    <Alert title="Success!" variant="success">
+                      {alertMessage.message}{' '}
+                    </Alert>
+                  ) : null}
                   <FormLogin />
                 </Card>
               </div>

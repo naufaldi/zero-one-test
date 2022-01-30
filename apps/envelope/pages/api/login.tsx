@@ -16,13 +16,11 @@ export default function handler(
   const { email, password } = req.body;
   //  dummy function check email and password as admin
   if (email === 'admin@evelope.com' && password === 'admin') {
-    res.statusCode = 200;
-    res.json({
+    res.status(200).json({
       message: 'Login Success',
     });
   } else {
-    res.statusCode = 401;
-    res.json({
+    res.status(401).json({
       message: 'Login Failed',
     });
   }

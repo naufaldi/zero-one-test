@@ -1,11 +1,14 @@
+import { AlertAtom } from '@zero-one/apps/recoil/Alert';
 import Link from 'next/link';
 import React, { FC } from 'react';
+import { useRecoilState } from 'recoil';
 import Button from '../common/Button';
 import Input from '../common/Input';
 
 const FormLogin: FC = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+  const [email, setEmail] = React.useState<string>('');
+  const [password, setPassword] = React.useState<string>('');
+  const [alertMessage, setAlertMessage] = useRecoilState(AlertAtom);
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const res = await fetch('/api/login', {
@@ -16,7 +19,18 @@ const FormLogin: FC = () => {
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
-    alert(data.message);
+    // alert(res.status);
+    if (res.status === 200) {
+      setAlertMessage({
+        type: 'success',
+        message: 'Login Success',
+      });
+    } else {
+      setAlertMessage({
+        type: 'error',
+        message: data.message,
+      });
+    }
   };
   return (
     <form className="flex flex-col mt-4">

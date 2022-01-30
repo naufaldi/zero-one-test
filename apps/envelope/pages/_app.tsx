@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { RecoilRoot } from 'recoil';
 import '/styles/styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
@@ -9,7 +10,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to envelope!</title>
       </Head>
       <main className="app">
-        <Component {...pageProps} />
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
       </main>
     </>
   );
