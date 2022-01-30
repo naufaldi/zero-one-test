@@ -1,1 +1,1 @@
-export * from './lib/shared-ui-tail';
+export * from './Grid/Grid';

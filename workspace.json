@@ -3,7 +3,6 @@
   "projects": {
     "envelope": "apps/envelope",
     "envelope-e2e": "apps/envelope-e2e",
-    "shared-ui-kit": "libs/shared/ui-kit",
     "shared-ui-tail": "libs/shared/ui-tail"
   }
 }
