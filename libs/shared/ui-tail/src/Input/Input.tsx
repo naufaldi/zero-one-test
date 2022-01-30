@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import clsxm from '../lib/clsxm';
 
-type InputProps = {
+export type InputProps = {
   label: string;
   placeholder: string;
   value: string;
