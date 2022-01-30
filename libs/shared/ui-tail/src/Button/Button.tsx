@@ -13,8 +13,7 @@ enum ButtonSize {
   'large',
 }
 
-type ButtonProps = {
-  isDarkBg?: boolean;
+export type ButtonProps = {
   variant?: keyof typeof ButtonVariant;
   size?: keyof typeof ButtonSize;
   type?: string;
@@ -26,7 +25,6 @@ export const Button: React.FC<ButtonProps> = ({
   disabled: buttonDisabled,
   variant = 'primary',
   size = 'medium',
-  isDarkBg = false,
   type = 'button',
   ...rest
 }) => {
@@ -54,12 +52,14 @@ export const Button: React.FC<ButtonProps> = ({
             'text-white',
             'border border-white-500',
             'hover:bg-white active:bg-white hover:text-blue-500 disabled:bg-white',
-            isDarkBg &&
-              'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
           ],
         ],
         //#endregion  //*======== Variants ===========
-        [size === 'medium' && 'px-4 py-2', size === 'large' && 'px-8 py-3'],
+        [
+          size === 'medium' && 'px-4 py-2',
+          size === 'large' && 'px-8 py-3',
+          size === 'small' && 'px-2 py-1',
+        ],
         'disabled:cursor-not-allowed',
 
         className

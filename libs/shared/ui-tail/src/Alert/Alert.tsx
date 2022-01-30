@@ -1,11 +1,11 @@
-import clsxm from '@zero-one/apps/lib/clsxm';
+import clsxm from '../lib/clsxm';
 import React, { FC } from 'react';
 
-enum AlertVariant {
+export enum AlertVariant {
   'success',
   'error',
 }
-type AlertProps = {
+export type AlertProps = {
   variant: keyof typeof AlertVariant;
   className?: string;
   title: string;
