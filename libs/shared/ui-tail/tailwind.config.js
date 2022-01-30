@@ -1,5 +1,5 @@
 module.exports = {
-  presets: [require('../../tailwind-workspace-preset.js')],
+  presets: [require('../../../tailwind-workspace-preset.js')],
   content: ['libs/shared/ui-tail/src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
