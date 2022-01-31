@@ -27,7 +27,7 @@ export const Input: FC<InputProps> = ({
   return (
     <div className={clsxm('relative group', className)}>
       <label
-        htmlFor="base-input"
+        htmlFor={id}
         className="block mb-2 text-base font-medium text-gray-900 absolute left-[14px] -top-[14px] border-l-2 border-r-2 border-t border-b border-white bg-white group-focus:text-blue-500"
       >
         {label}

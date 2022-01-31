@@ -32,17 +32,17 @@ describe('render text and anchor view report', () => {
 
 // RTL ways
 
-test('alert message', async () => {
-  render(
-    <RecoilRoot>
-      <Index />
-    </RecoilRoot>
-  );
+// test('alert message', async () => {
+//   render(
+//     <RecoilRoot>
+//       <Index />
+//     </RecoilRoot>
+//   );
 
-  // Click button
-  fireEvent.click(screen.getByText('Sign In'));
+//   // Click button
+//   fireEvent.click(screen.getByText('Sign In'));
 
-  // Wait for page to update with query text
-  const alertItem = await screen.findByRole('alert');
-  expect(alertItem).toBeTruthy();
-});
+//   // Wait for page to update with query text
+//   const alertItem = await screen.findByRole('alert');
+//   expect(alertItem).toBeTruthy();
+// });
