@@ -3,31 +3,31 @@ import { RecoilRoot } from 'recoil';
 import FormLogin from '../components/login/FormLogin';
 import userEvent from '@testing-library/user-event';
 
-const setupEmail = () => {
+const setupPassword = () => {
   const utils = render(
     <RecoilRoot>
       <FormLogin />
     </RecoilRoot>
   );
-  const input = utils.getByLabelText('Email') as HTMLInputElement;
+  const input = utils.getByLabelText('Password') as HTMLInputElement;
   return {
     input,
     ...utils,
   };
 };
 
-test('render email input ', () => {
-  const { input } = setupEmail();
+test('render Password input ', () => {
+  const { input } = setupPassword();
   expect(input).toBeTruthy();
 });
 
-test('It should always email', () => {
-  const { input } = setupEmail();
-  userEvent.type(input, 'naufaldi.rafif@gmail.com');
-  expect(input.value).toBe('naufaldi.rafif@gmail.com');
+test('It should always Password', () => {
+  const { input } = setupPassword();
+  userEvent.type(input, 'asd123');
+  expect(input.value).toBe('asd123');
 });
-test('It should required email', () => {
-  const { input } = setupEmail();
+test('It should required Password', () => {
+  const { input } = setupPassword();
   expect(input).toHaveValue('');
   expect(input).toHaveAttribute('required');
 });
