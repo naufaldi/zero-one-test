@@ -98,3 +98,12 @@ Start Test Shared UI Tail
 ![Dekstop Preview](/screenshot/dekstop.png)
 ![Mobile Preview](/screenshot/mobile.png)
 ![Storybook Preview](/screenshot/storybook.png)
+
+## Dummy API
+
+for testing, we make fake API using Next API
+
+`https://zero-one-envelope.vercel.app/api/login` is a fake API for testing or `localhost:4200/api/login` for local testing
+
+![Success Preview](/screenshot/success.png)
+![Error Preview](/screenshot/error.png)
