@@ -1,9 +1,8 @@
-import { AlertAtom } from '@zero-one/apps/recoil/Alert';
+import { AlertAtom } from '../../recoil/Alert';
+import { Button, Input } from '@zero-one/shared/ui-tail';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { useRecoilState } from 'recoil';
-import Button from '../common/Button';
-import Input from '../common/Input';
 
 const FormLogin: FC = () => {
   const [email, setEmail] = React.useState<string>('');
