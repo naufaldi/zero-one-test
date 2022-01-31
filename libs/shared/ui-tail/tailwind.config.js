@@ -1,6 +1,9 @@
 module.exports = {
   presets: [require('../../../tailwind-workspace-preset.js')],
-  content: ['libs/shared/ui-tail/src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    'libs/shared/ui-tail/src/**/*.{js,ts,jsx,tsx}',
+    'libs/shared/ui-tail/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       fontFamily: {

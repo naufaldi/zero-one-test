@@ -3,6 +3,7 @@ module.exports = {
   content: [
     'apps/envelope/pages/**/*.{js,ts,jsx,tsx}',
     'apps/envelope/components/**/*.{js,ts,jsx,tsx}',
+    'libs/shared/ui-tail/src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
