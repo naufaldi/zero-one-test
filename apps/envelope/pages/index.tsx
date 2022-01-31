@@ -30,7 +30,9 @@ export function Index() {
                 <Button
                   variant="outline"
                   size="large"
-                  className="rounded-lg max-w-[250px] w-full flex items-center justify-center"
+                  className="rounded-lg max-w-[250px] w-full flex items-center justify-center cursor-pointer"
+                  tag="a"
+                  href="https://www.google.com"
                 >
                   View Report
                   <ExternalLink className="w-4 h-4 ml-3" />

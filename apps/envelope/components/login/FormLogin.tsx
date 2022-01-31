@@ -36,7 +36,7 @@ const FormLogin: FC = () => {
       <Input
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder=""
+        placeholder="Your Email Here"
         label="Email"
         id="email"
         type="email"
@@ -46,7 +46,7 @@ const FormLogin: FC = () => {
       <Input
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        placeholder=""
+        placeholder="Your Password Here"
         label="Password"
         id="password"
         type="password"

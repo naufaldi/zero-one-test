@@ -13,11 +13,14 @@ enum ButtonSize {
   'large',
 }
 
-export type ButtonProps = {
+export interface ButtonProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: keyof typeof ButtonVariant;
   size?: keyof typeof ButtonSize;
   type?: string;
-} & React.ComponentPropsWithRef<'button'>;
+  tag?: React.ElementType;
+  disabled?: boolean;
+}
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -26,12 +29,13 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium',
   type = 'button',
+  tag = 'button',
   ...rest
 }) => {
   const disabled = buttonDisabled;
-
+  const Component = tag;
   return (
-    <button
+    <Component
       type={type}
       disabled={disabled}
       className={clsxm(
@@ -67,7 +71,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...rest}
     >
       {children}
-    </button>
+    </Component>
   );
 };
 
