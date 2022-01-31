@@ -9,6 +9,7 @@ export type CardProps = {
 export const Card: FC<CardProps> = ({ children, className }) => {
   return (
     <div
+      data-testid="card-element"
       className={clsxm(
         'shadow-md rounded-lg px-6 sm:px-12 py-6 sm:py-8 w-full bg-white',
         className

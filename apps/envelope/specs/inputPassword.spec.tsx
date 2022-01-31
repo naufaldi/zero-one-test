@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 import FormLogin from '../components/login/FormLogin';
 import userEvent from '@testing-library/user-event';
